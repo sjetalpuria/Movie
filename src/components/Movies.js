@@ -19,14 +19,14 @@ const Movies = () => {
        
        fetchMoviesData(); // async function syntax call
       
-    }, []);
+    }, [])
 
    return ( 
       <div> 
          <h1>Popular Movies</h1> 
         
          {movies.map((movie) => ( 
-         <Link  key={movie.id} to={`/details?id=${movie.id}`} >
+         <Link key={movie.id} to={`/details?id=${movie.id}`} >
          
          <div key={movie.id} >
             <img src= {`${url + movie.poster_path}`} alt="" />
